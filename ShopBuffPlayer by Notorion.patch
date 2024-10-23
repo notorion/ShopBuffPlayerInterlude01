@@ -1,0 +1,2260 @@
+### Eclipse Workspace Patch 1.0
+#P L2J_Mobius_Classic_Interlude
+diff --git .gitignore .gitignore
+new file mode 100644
+index 0000000..ae3c172
+--- /dev/null
++++ .gitignore
+@@ -0,0 +1 @@
++/bin/
+diff --git dist/game/data/multisell/888855.xml dist/game/data/multisell/888855.xml
+new file mode 100644
+index 0000000..6ed94aa
+--- /dev/null
++++ dist/game/data/multisell/888855.xml
+@@ -0,0 +1,36 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
++    <npcs>
++        <npc>888855</npc> <!-- ID do BuffFollow -->
++        <npc>888856</npc> <!-- ID do BuffFollow -->
++        <npc>888857</npc> <!-- ID do BuffFollow -->
++        <npc>888858</npc> <!-- ID do BuffFollow -->
++        <npc>888859</npc> <!-- ID do BuffFollow -->
++        <npc>888860</npc> <!-- ID do BuffFollow -->
++    </npcs>
++	<item>
++		<!-- Adena -->
++		<ingredient count="55000000" id="57" />
++		<!-- Spirit Ore -->
++		<production count="100000" id="3031" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="35000000" id="57" />
++		<!-- SoulStone -->
++		<production count="100000" id="1785" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="2000000" id="57" />
++		<!-- Blessed Ress -->
++		<production count="1" id="22623" />
++
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="5000000" id="57" />
++		<!-- Blessed Escape -->
++		<production count="10" id="21195" />
++	</item>
++</list>
+diff --git dist/game/data/multisell/custom/888899.xml dist/game/data/multisell/custom/888899.xml
+new file mode 100644
+index 0000000..a185db7
+--- /dev/null
++++ dist/game/data/multisell/custom/888899.xml
+@@ -0,0 +1,144 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
++    <npcs>
++        <npc>888899</npc> <!-- ID do ShopBuffPlayer -->
++    </npcs>
++	<item>
++		<!-- Adena -->
++		<ingredient count="1336100" id="57" />
++		<!-- Great Sword -->
++		<production count="1" id="78" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="1336100" id="57" />
++		<!-- Heavy War Axe -->
++		<production count="1" id="91" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="1336100" id="57" />
++		<!-- Spirit's Staff -->
++		<production count="1" id="92" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="1336100" id="57" />
++		<!-- Keshanberk -->
++		<production count="1" id="142" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="1336100" id="57" />
++		<!-- Sword of Valhalla -->
++		<production count="1" id="148" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="1336100" id="57" />
++		<!-- Kris -->
++		<production count="1" id="229" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="1336100" id="57" />
++		<!-- Twilight Knife -->
++		<production count="1" id="243" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="1336100" id="57" />
++		<!-- Arthro Nail -->
++		<production count="1" id="267" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="1336100" id="57" />
++		<!-- Dark Elven Longbow -->
++		<production count="1" id="284" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="1336100" id="57" />
++		<!-- Great Axe -->
++		<production count="1" id="300" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="1336100" id="57" />
++		<!-- Spell Breaker -->
++		<production count="1" id="7892" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="1336100" id="57" />
++		<!-- Ice Storm Hammer -->
++		<production count="1" id="7900" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="20741000" id="57" />
++		<!-- Soul Separator -->
++		<production count="1" id="236" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="20741000" id="57" />
++		<!-- Sword of Miracles -->
++		<production count="1" id="151" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="20741000" id="57" />
++		<!-- Dark Legion's Edge -->
++		<production count="1" id="2500" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="20741000" id="57" />
++		<!-- Dragon Slayer -->
++		<production count="1" id="81" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="20741000" id="57" />
++		<!-- Doom Crusher -->
++		<production count="1" id="7902" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="20741000" id="57" />
++		<!-- Soul Bow -->
++		<production count="1" id="289" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="20741000" id="57" />
++		<!-- Flaming Dragon Skull -->
++		<production count="1" id="7895" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="20741000" id="57" />
++		<!-- Elysian -->
++		<production count="1" id="164" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="20741000" id="57" />
++		<!-- Branch of the Mother Tree -->
++		<production count="1" id="213" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="20741000" id="57" />
++		<!-- Tallum Glaive -->
++		<production count="1" id="305" />
++	</item>
++	<item>
++		<!-- Adena -->
++		<ingredient count="20741000" id="57" />
++		<!-- Dragon Grinder -->
++		<production count="1" id="270" />
++	</item>
++</list>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/888899.html dist/game/data/scripts/custom/ShopBuffPlayer/888899.html
+new file mode 100644
+index 0000000..9d54a8c
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/888899.html
+@@ -0,0 +1,15 @@
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++    <tr><td height=30></td></tr>
++    <tr><td align=center><font name="hs11" color="LEVEL">Hello, adventurer! I can offer you...</font></td></tr>
++    <tr><td height=10></td></tr>
++    <tr><td align=center><font name="hs9">Give me adenas or Einhasad's Coin, <br1>and I deliver you buffs, items and NPC Support.</font></td></tr>
++    <tr><td height=35></td></tr>
++    <tr>
++        <td align=center>
++            <button value="Accept Sonia's sales conditions" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer npc_default" msg="Accept" width=220 height=35 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++        </td>
++    </tr>
++    <tr><td height=40></td></tr>
++</table>
++</body></html>
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/BuffFollow.java dist/game/data/scripts/custom/ShopBuffPlayer/BuffFollow.java
+new file mode 100644
+index 0000000..32d96fc
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/BuffFollow.java
+@@ -0,0 +1,758 @@
++/*
++ * This file is part of the L2J Mobius project.
++ * 
++ * This program is free software: you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation, either version 3 of the License, or
++ * (at your option) any later version.
++ * 
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
++ * General Public License for more details.
++ * 
++ * You should have received a copy of the GNU General Public License
++ * along with this program. If not, see <http://www.gnu.org/licenses/>.
++ */
++package custom.ShopBuffPlayer;
++
++import java.io.File;
++import java.io.FileNotFoundException;
++import java.lang.ref.WeakReference;
++import java.util.ArrayList;
++import java.util.Arrays;
++import java.util.Calendar;
++import java.util.HashMap;
++import java.util.List;
++import java.util.Map;
++import java.util.Random;
++import java.util.Scanner;
++import java.util.TimeZone;
++
++import org.l2jmobius.gameserver.ai.CtrlIntention;
++import org.l2jmobius.gameserver.data.xml.SkillData;
++import org.l2jmobius.gameserver.enums.ChatType;
++import org.l2jmobius.gameserver.enums.SkillFinishType;
++import org.l2jmobius.gameserver.model.Location;
++import org.l2jmobius.gameserver.model.World;
++import org.l2jmobius.gameserver.model.WorldObject;
++import org.l2jmobius.gameserver.model.actor.Creature;
++import org.l2jmobius.gameserver.model.actor.Npc;
++import org.l2jmobius.gameserver.model.actor.Player;
++import org.l2jmobius.gameserver.model.actor.instance.GrandBoss;
++import org.l2jmobius.gameserver.model.actor.instance.RaidBoss;
++import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcTeleport;
++import org.l2jmobius.gameserver.model.holders.SkillHolder;
++import org.l2jmobius.gameserver.model.holders.SkillUseHolder;
++import org.l2jmobius.gameserver.model.skill.Skill;
++import org.l2jmobius.gameserver.model.skill.SkillCaster;
++import org.l2jmobius.gameserver.model.skill.targets.AffectScope;
++import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
++import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
++
++import ai.AbstractNpcAI;
++
++/**
++ * @author Notorion version Classic Interlude
++ */
++public class BuffFollow extends AbstractNpcAI
++{
++	private static final int SHOP_NPC = 888899;
++	private static final int[] FOLLOW_BUFF_NPCS =
++	{
++		888855,
++		888856,
++		888857,
++		888858,
++		888859,
++		888860
++	};
++	private static final long BUFF_PRICE = 5000000;
++	private static final int BUFF_DELAY = 90000;
++	private static final int NPC_DURATION = 60000;
++	private static final SkillHolder[] SHOP_BUFFS =
++	{
++		new SkillHolder(4324, 1),
++		new SkillHolder(4325, 1),
++		new SkillHolder(4326, 1),
++		new SkillHolder(4327, 1),
++		new SkillHolder(4328, 1),
++		new SkillHolder(4329, 1),
++		new SkillHolder(4322, 1),
++		new SkillHolder(4323, 1),
++		new SkillHolder(7050, 1),
++		new SkillHolder(7054, 1),
++		new SkillHolder(888862, 1),
++		new SkillHolder(888863, 1)
++	};
++	
++	private static final int SUPPORT_SKILL_1_ID = 888861;
++	private static final int SUPPORT_SKILL_2_ID = 888860;
++	private static final double TELEPORT_DISTANCE = 500;
++	private static final int CHECK_INSTANCE_DELAY = 1000; // Interval to check the player's instance (in milliseconds).
++	
++	private static class DaySchedule
++	{
++		int dayOfWeek;
++		boolean enabled;
++		int startHour;
++		int startMinute;
++		int endHour;
++		int endMinute;
++		
++		public DaySchedule(int dayOfWeek, boolean enabled, int startHour, int startMinute, int endHour, int endMinute)
++		{
++			this.dayOfWeek = dayOfWeek;
++			this.enabled = enabled;
++			this.startHour = startHour;
++			this.startMinute = startMinute;
++			this.endHour = endHour;
++			this.endMinute = endMinute;
++		}
++	}
++	
++	private static DaySchedule[] SCHEDULE;
++	private long lastReloadTime = 0;
++	private static final long RELOAD_INTERVAL = 1 * 60 * 1000; // 1 minute in milliseconds
++	
++	private final Map<Integer, Npc> playerNpcMap = new HashMap<>();
++	private final Map<Integer, Boolean> buffActive = new HashMap<>();
++	private final Map<Integer, Long> _reuseTime = new HashMap<>();
++	private final Map<Integer, Long> blockTimer = new HashMap<>();
++	private static final Map<String, Integer> DAY_OF_WEEK_MAP = new HashMap<>();
++	static
++	{
++		DAY_OF_WEEK_MAP.put("MONDAY", Calendar.MONDAY);
++		DAY_OF_WEEK_MAP.put("TUESDAY", Calendar.MONDAY);
++		DAY_OF_WEEK_MAP.put("WEDNESDAY", Calendar.MONDAY);
++		DAY_OF_WEEK_MAP.put("THURSDAY", Calendar.MONDAY);
++		DAY_OF_WEEK_MAP.put("FRIDAY", Calendar.MONDAY);
++		DAY_OF_WEEK_MAP.put("SATURDAY", Calendar.MONDAY);
++		DAY_OF_WEEK_MAP.put("SUNDAY", Calendar.MONDAY);
++	}
++	
++	private final Random _random = new Random();
++	
++	public BuffFollow()
++	{
++		addStartNpc(SHOP_NPC);
++		for (int npcId : FOLLOW_BUFF_NPCS)
++		{
++			addTalkId(SHOP_NPC, npcId);
++		}
++		for (int npcId : FOLLOW_BUFF_NPCS)
++		{
++			addFirstTalkId(SHOP_NPC, npcId);
++		}
++		addSpawnId(FOLLOW_BUFF_NPCS);
++		addAttackId(FOLLOW_BUFF_NPCS);
++		
++		startQuestTimer("checkSchedule", 60000, null, null, true);
++		startQuestTimer("checkDistance", 2000, null, null, true);
++		startQuestTimer("checkInstance", CHECK_INSTANCE_DELAY, null, null, true);
++		loadScheduleFromFile();
++		if (SCHEDULE == null)
++		{
++			SCHEDULE = new DaySchedule[0];
++		}
++	}
++	
++	private void checkNpcSchedule()
++	{
++		Calendar calendar = Calendar.getInstance();
++		int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
++		int hourOfDay = calendar.get(Calendar.HOUR_OF_DAY);
++		int minuteOfHour = calendar.get(Calendar.MINUTE);
++		LOGGER.info("Verifying Schedule: Day " + dayOfWeek + ", hour " + hourOfDay + ":" + minuteOfHour);
++		long currentTime = System.currentTimeMillis();
++		if ((currentTime - lastReloadTime) > RELOAD_INTERVAL)
++		{
++			LOGGER.info("Recharging TXT scheduling file ...");
++			loadScheduleFromFile();
++			lastReloadTime = currentTime;
++		}
++		for (DaySchedule daySchedule : SCHEDULE)
++		{
++			if (daySchedule.dayOfWeek == dayOfWeek)
++			{
++				boolean isActive = daySchedule.enabled && ((hourOfDay > daySchedule.startHour) || ((hourOfDay == daySchedule.startHour) && (minuteOfHour >= daySchedule.startMinute))) && ((hourOfDay < daySchedule.endHour) || ((hourOfDay == daySchedule.endHour) && (minuteOfHour < daySchedule.endMinute)));
++				LOGGER.info("Schedule for the day " + dayOfWeek + ": " + (isActive ? "Active" : "Inactive"));
++				
++				if (isActive)
++				{
++					LOGGER.info("NPC activated for the day " + dayOfWeek);
++				}
++				else
++				{
++					for (Player p : World.getInstance().getPlayers())
++					{
++						Npc buffNpc = playerNpcMap.get(p.getObjectId());
++						if (buffNpc != null)
++						{
++							cancelBuffs(p);
++							p.sendMessage("The support NPC has been deactivated.");
++							LOGGER.info("NPC Deactivated to the player " + p.getName());
++						}
++					}
++				}
++				break;
++			}
++		}
++	}
++	
++	public void onNpcTeleported(OnNpcTeleport event)
++	{
++		Npc buffNpc = event.getNpc();
++		WorldObject target = buffNpc.getTarget();
++		
++		if (target instanceof Player)
++		{
++			Player player = (Player) target;
++			int heading = player.getHeading();
++			double radian = Math.toRadians(heading);
++			int offsetX = (int) (Math.cos(radian) * -500); // distance behind the player
++			int offsetY = (int) (Math.sin(radian) * -500);
++			int npcX = player.getX() + offsetX;
++			int npcY = player.getY() + offsetY;
++			int npcZ = player.getZ();
++			
++			buffNpc.teleToLocation(npcX, npcY, npcZ);
++		}
++	}
++	
++	@Override
++	public String onSpawn(Npc npc)
++	{
++		if (Arrays.stream(FOLLOW_BUFF_NPCS).anyMatch(id -> id == npc.getId()))
++		{
++			startQuestTimer("CHECK_DISTANCE", 2000, npc, null, true);
++		}
++		return super.onSpawn(npc);
++	}
++	
++	@Override
++	public String onEvent(String event, Npc npc, Player player)
++	{
++		switch (event)
++		{
++			case "follow_buffs":
++				if (_reuseTime.containsKey(player.getObjectId()) && (_reuseTime.get(player.getObjectId()) > System.currentTimeMillis()))
++				{
++					player.sendMessage("You should wait just before requesting the buffs again.");
++					return null;
++				}
++				
++				if (!isNpcActive())
++				{
++					player.sendMessage("Follow Player Support is not currently available.");
++					player.sendPacket(new SystemMessage(13594)); // It is not available for interlude version id 13594
++					return null;
++				}
++				
++				showScheduleHtml(player, false);
++				
++				if (getQuestItemsCount(player, 57) >= BUFF_PRICE)
++				{
++					takeItems(player, 57, BUFF_PRICE);
++					applyBuffs(player);
++					startQuestTimer("summon_buff_npc", BUFF_DELAY, null, player);
++					_reuseTime.put(player.getObjectId(), System.currentTimeMillis() + (15 * 1000)); // 15 seconds waiting for the next buff
++					
++					return "buff_thank_you.html";
++				}
++				return "no_adena.html";
++			case "loadSchedule":
++				loadScheduleFromFile(); // Call the method to load the scheduling file TXT
++				break;
++			case "showSchedule":
++				showScheduleHtml(player, false);
++				break;
++			case "checkSchedule":
++				checkNpcSchedule();
++				break;
++			case "checkInstance":
++				checkPlayerInstance();
++				break;
++			
++			case "summon_buff_npc":
++				if (!playerNpcMap.containsKey(player.getObjectId()))
++				{
++					int randomNpcId = FOLLOW_BUFF_NPCS[_random.nextInt(FOLLOW_BUFF_NPCS.length)];
++					
++					Npc buffNpc = addSpawn(randomNpcId, player.getX(), player.getY() - 350, player.getZ(), 0, false, NPC_DURATION);
++					startQuestTimer("startFollowing", 500, buffNpc, player);
++					buffNpc.setTitle(player.getName() + "'s Buff NPC");
++					buffNpc.setRunning();
++					buffNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
++					playerNpcMap.put(player.getObjectId(), buffNpc);
++					buffActive.put(player.getObjectId(), true);
++					applyBuffs(player);
++					startQuestTimer("check_status", 1000, buffNpc, player, true);
++					player.sendMessage("Talk to Follow Player or NPC Sonia and select 'Unfollow' to cancel the buffs.");
++				}
++				
++				startQuestTimer("respawn_buff_npc", BUFF_DELAY, null, player);
++				break;
++			
++			case "startFollowing":
++				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
++				break;
++			
++			case "respawn_buff_npc":
++				if (buffActive.getOrDefault(player.getObjectId(), false))
++				{
++					Npc oldNpc = playerNpcMap.remove(player.getObjectId());
++					if (oldNpc != null)
++					{
++						oldNpc.deleteMe();
++					}
++					// Select a random NPC from the list
++					int randomNpcId = FOLLOW_BUFF_NPCS[_random.nextInt(FOLLOW_BUFF_NPCS.length)];
++					
++					Npc newNpc = addSpawn(randomNpcId, player.getX(), player.getY() - 350, player.getZ(), 0, false, NPC_DURATION);
++					newNpc.setTitle(player.getName() + "'s Buff NPC");
++					newNpc.setRunning();
++					newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player); // Follow the player
++					playerNpcMap.put(player.getObjectId(), newNpc);
++					applyBuffs(player);
++					startQuestTimer("check_status", 1000, newNpc, player, true);
++					startQuestTimer("respawn_buff_npc", BUFF_DELAY, null, player);
++				}
++				break;
++			
++			case "checkDistance":
++				for (Player p : World.getInstance().getPlayers())
++				{
++					Npc buffNpc = playerNpcMap.get(p.getObjectId());
++					if ((buffNpc != null) && (buffNpc.calculateDistance3D(p) > TELEPORT_DISTANCE))
++					{
++						// Calculates NPC's spawn position behind the player
++						int heading = p.getHeading();
++						double radian = Math.toRadians(heading);
++						int offsetX = (int) (Math.cos(radian) * -500);
++						int offsetY = (int) (Math.sin(radian) * -500);
++						int npcX = p.getX() + offsetX;
++						int npcY = p.getY() + offsetY;
++						int npcZ = p.getZ();
++						
++						buffNpc.teleToLocation(npcX, npcY, npcZ);
++						buffNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, p);
++					}
++				}
++				break;
++			
++			case "check_status":
++				if (shouldRemoveBuffs(player))
++				{
++					removeSupportBuffs(player);
++					if (npc != null)
++					{
++						npc.broadcastSay(ChatType.NPC_GENERAL, "Buffs removed from " + player.getName() + " due to combat condition.");
++						// Adds the 20 second lock
++						blockTimer.put(player.getObjectId(), System.currentTimeMillis() + 20000);
++					}
++				}
++				else if (buffActive.getOrDefault(player.getObjectId(), false))
++				{
++					if (blockTimer.containsKey(player.getObjectId()) && (blockTimer.get(player.getObjectId()) > System.currentTimeMillis()))
++					{
++						return null; // Does not apply the buffs if it is blocked
++					}
++					
++					applySupportSkills(npc, player);
++				}
++				break;
++			
++			case "cancel_buff":
++				cancelBuffs(player);
++				return "buff_cancelled.html";
++			
++			case "open_npc_menu":
++				return "npc_menu.html";
++		}
++		return super.onEvent(event, npc, player);
++	}
++	
++	private int getDayOfWeekValue(String dayName)
++	{
++		switch (dayName)
++		{
++			case "SUNDAY":
++				return Calendar.SUNDAY;
++			case "MONDAY":
++				return Calendar.MONDAY;
++			case "TUESDAY":
++				return Calendar.TUESDAY;
++			case "WEDNESDAY":
++				return Calendar.WEDNESDAY;
++			case "THURSDAY":
++				return Calendar.THURSDAY;
++			case "FRIDAY":
++				return Calendar.FRIDAY;
++			case "SATURDAY":
++				return Calendar.SATURDAY;
++			default:
++				return -1;
++		}
++	}
++	
++	private void loadScheduleFromFile()
++	{
++		try
++		{
++			File file = new File("data/scripts/custom/ShopBuffPlayer/schedule.txt");
++			Scanner scanner = new Scanner(file);
++			
++			List<DaySchedule> scheduleList = new ArrayList<>();
++			while (scanner.hasNextLine())
++			{
++				String line = scanner.nextLine();
++				String[] parts = line.split(",");
++				if (parts.length == 6)
++				{
++					try
++					{
++						String dayName = parts[0].trim();
++						int dayOfWeek = getDayOfWeekValue(dayName);
++						boolean enabled = Boolean.parseBoolean(parts[1].trim());
++						int startHour = Integer.parseInt(parts[2].trim());
++						int startMinute = Integer.parseInt(parts[3].trim());
++						int endHour = Integer.parseInt(parts[4].trim());
++						int endMinute = Integer.parseInt(parts[5].trim());
++						scheduleList.add(new DaySchedule(dayOfWeek, enabled, startHour, startMinute, endHour, endMinute));
++					}
++					catch (NumberFormatException e)
++					{
++						LOGGER.warning("Error reading the appointment file:" + e.getMessage());
++					}
++				}
++			}
++			scanner.close();
++			
++			SCHEDULE = scheduleList.toArray(new DaySchedule[0]);
++			
++		}
++		catch (FileNotFoundException e)
++		{
++			LOGGER.warning("Schedule file not found: " + e.getMessage());
++		}
++		LOGGER.info("Finished loading of the appointment file. Total inputs: " + (SCHEDULE != null ? SCHEDULE.length : 0));
++	}
++	
++	private void showScheduleHtml(Player player, boolean showActivationMessage)
++	{
++		// HTML with time information
++		String html = "<html><body><br>";
++		// Displays the activation message only if show activation Message for True
++		if (showActivationMessage)
++		{
++			html += "<center><font name=\"hs12\" color=\"LEVEL\">You active NPC Buff Follow!</font></center><br>";
++		}
++		html += "<center>Available days and times:</center><br>";
++		html += "<center><table border=\"1\" color=\"white\" width=230 height=150>";
++		html += "<tr><td align=\"center\">Day</td><td align=\"center\">Time</td></tr>";
++		
++		for (DaySchedule daySchedule : SCHEDULE)
++		{
++			String dayName = getDayOfWeekName(daySchedule.dayOfWeek);
++			String startTime = String.format("%02d:%02d", daySchedule.startHour, daySchedule.startMinute);
++			String endTime = String.format("%02d:%02d", daySchedule.endHour, daySchedule.endMinute);
++			String Time = daySchedule.enabled ? startTime + " - " + endTime : "Unavailable";
++			
++			html += "<tr><td align=\"center\">" + dayName + "</td><td align=\"center\">" + Time + "</td></tr>";
++		}
++		
++		html += "</table></center><br>";
++		
++		// Current day and time at the player's time zone
++		Calendar calendar = Calendar.getInstance();
++		String currentDayName = getDayOfWeekName(calendar.get(Calendar.DAY_OF_WEEK));
++		String currentTime = String.format("%02d:%02d", calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE));
++		html += "<center>Today is " + currentDayName + " and it's " + currentTime + " (GMT " + getGmtOffset() + ")</center><br>";
++		
++		html += "<td><button value=\"Close\" action=\"bypass -h npc_%objectId%_Quest BuffFollow npc_menu\" width=80 height=28 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>";
++		html += "</body></html>";
++		
++		NpcHtmlMessage htmlMessage = new NpcHtmlMessage(0);
++		htmlMessage.setHtml(html);
++		player.sendPacket(htmlMessage);
++	}
++	
++	private String getDayOfWeekName(int dayOfWeek)
++	{
++		switch (dayOfWeek)
++		{
++			case Calendar.SUNDAY:
++				return "Sunday";
++			case Calendar.MONDAY:
++				return "Monday";
++			case Calendar.TUESDAY:
++				return "Tuesday";
++			case Calendar.WEDNESDAY:
++				return "Wednesday";
++			case Calendar.THURSDAY:
++				return "Thursday";
++			case Calendar.FRIDAY:
++				return "Friday";
++			case Calendar.SATURDAY:
++				return "Saturday";
++			default:
++				return "Invalid day";
++		}
++	}
++	
++	// Player GMT
++	private String getGmtOffset()
++	{
++		TimeZone tz = TimeZone.getDefault();
++		int offset = tz.getRawOffset() / 3600000;
++		return (offset >= 0 ? "+" : "") + offset;
++	}
++	
++	private boolean isNpcActive()
++	{
++		Calendar calendar = Calendar.getInstance();
++		int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
++		int hourOfDay = calendar.get(Calendar.HOUR_OF_DAY);
++		int minuteOfHour = calendar.get(Calendar.MINUTE);
++		LOGGER.info("Checking if the NPC is active: Day " + dayOfWeek + ", Hour " + hourOfDay + ":" + minuteOfHour);
++		
++		for (DaySchedule daySchedule : SCHEDULE)
++		{
++			if (daySchedule.dayOfWeek == dayOfWeek)
++			{
++				// Checks if the NPC is enabled for the current day and if the current time and minute are within the permitted interval
++				if (daySchedule.enabled)
++				{
++					if ((hourOfDay > daySchedule.startHour) || ((hourOfDay == daySchedule.startHour) && (minuteOfHour >= daySchedule.startMinute)))
++					{
++						if ((hourOfDay < daySchedule.endHour) || ((hourOfDay == daySchedule.endHour) && (minuteOfHour < daySchedule.endMinute)))
++						{
++							return true;
++						}
++					}
++				}
++				LOGGER.info("NPC is not enabled for the day " + dayOfWeek);
++				return false;
++			}
++		}
++		LOGGER.info("Day " + dayOfWeek + " Not found in the scheduling");
++		return false;
++	}
++	
++	private void checkPlayerInstance()
++	{
++		for (Player p : World.getInstance().getPlayers())
++		{
++			Npc buffNpc = playerNpcMap.get(p.getObjectId());
++			if ((buffNpc != null) && (buffNpc.getInstanceWorld() != p.getInstanceWorld()))
++			{
++				int heading = p.getHeading();
++				double radian = Math.toRadians(heading);
++				int offsetX = (int) (Math.cos(radian) * -500);
++				int offsetY = (int) (Math.sin(radian) * -500);
++				int npcX = p.getX() + offsetX;
++				int npcY = p.getY() + offsetY;
++				int npcZ = p.getZ();
++				
++				buffNpc.teleToLocation(npcX, npcY, npcZ, p.getInstanceWorld());
++			}
++		}
++	}
++	
++	@Override
++	public String onFirstTalk(Npc npc, Player player)
++	{
++		if (Arrays.stream(FOLLOW_BUFF_NPCS).anyMatch(id -> id == npc.getId()))
++		{
++			Npc associatedNpc = playerNpcMap.get(player.getObjectId());
++			if ((associatedNpc != null) && (associatedNpc == npc))
++			{
++				return "buff_npc_menu.html";
++			}
++			player.sendPacket(new SystemMessage(4473));
++			return null;
++		}
++		return super.onFirstTalk(npc, player);
++	}
++	
++	private void applyBuffs(Player player)
++	{
++		for (SkillHolder holder : SHOP_BUFFS)
++		{
++			SkillCaster.triggerCast(player, player, holder.getSkill());
++		}
++	}
++	
++	private void applySupportSkills(Npc npc, Player player)
++	{
++		Skill supportSkill1 = SkillData.getInstance().getSkill(SUPPORT_SKILL_1_ID, 1);
++		Skill supportSkill2 = SkillData.getInstance().getSkill(SUPPORT_SKILL_2_ID, 1);
++		
++		if (supportSkill1 != null)
++		{
++			SkillCaster.triggerCast(npc, player, supportSkill1);
++		}
++		if (supportSkill2 != null)
++		{
++			SkillCaster.triggerCast(npc, player, supportSkill2);
++		}
++	}
++	
++	private boolean shouldRemoveBuffs(Player player)
++	{
++		boolean isPvP = (player.getPvpFlag() > 0) || (player.getReputation() < 0);
++		boolean isUsingAreaSkill = isPlayerUsingAreaSkill(player);
++		boolean isInCombatWithBoss = false;
++		boolean isInCombatWithPlayer = false;
++		
++		// Checks the player's state of combat
++		if (player.isInCombat())
++		{
++			for (WeakReference<Creature> weakRef : player.getAttackByList())
++			{
++				Creature attacker = weakRef.get();
++				if ((attacker instanceof GrandBoss) || (attacker instanceof RaidBoss))
++				{
++					isInCombatWithBoss = true;
++					break;
++				}
++			}
++			
++			if (!isInCombatWithBoss)
++			{
++				WorldObject target = player.getTarget();
++				if ((target instanceof GrandBoss) || (target instanceof RaidBoss))
++				{
++					isInCombatWithBoss = true;
++				}
++				else if (target instanceof Npc)
++				{
++					Npc npc = (Npc) target;
++					if (!npc.getTemplate().getType().equals("Monster"))
++					{
++						isInCombatWithPlayer = true;
++					}
++				}
++				else if (target instanceof Player)
++				{
++					isInCombatWithPlayer = true;
++				}
++			}
++			
++			if (!isInCombatWithBoss && !isInCombatWithPlayer)
++			{
++				for (Creature target : World.getInstance().getVisibleObjectsInRange(player, Creature.class, 1500))
++				{
++					if (target.isInCombat())
++					{
++						for (WeakReference<Creature> weakRef : target.getAttackByList())
++						{
++							Creature attacker = weakRef.get();
++							if ((attacker instanceof GrandBoss) || (attacker instanceof RaidBoss))
++							{
++								isInCombatWithBoss = true;
++								break;
++							}
++						}
++						if (isInCombatWithBoss)
++						{
++							break;
++						}
++					}
++				}
++			}
++		}
++		
++		if (isPvP || isUsingAreaSkill || isInCombatWithBoss || isInCombatWithPlayer)
++		{
++			return true;
++		}
++		
++		return false;
++	}
++	
++	private boolean isPlayerUsingAreaSkill(Player player)
++	{
++		SkillUseHolder queuedSkill = player.getQueuedSkill();
++		if (queuedSkill != null)
++		{
++			Skill skill = queuedSkill.getSkill();
++			if (isAreaSkill(skill))
++			{
++				return checkAreaSkillTargets(player, skill);
++			}
++		}
++		
++		if (player.isCastingNow())
++		{
++			Location skillPosition = player.getCurrentSkillWorldPosition();
++			if (skillPosition != null)
++			{
++				return checkAreaSkillTargets(player, null);
++			}
++		}
++		
++		return false;
++	}
++	
++	private boolean isAreaSkill(Skill skill)
++	{
++		return (skill != null) && ((skill.getAffectScope() == AffectScope.FAN) || (skill.getAffectScope() == AffectScope.SQUARE));
++	}
++	
++	private boolean checkAreaSkillTargets(Player player, Skill skill)
++	{
++		for (Creature target : World.getInstance().getVisibleObjectsInRange(player, Creature.class, skill != null ? skill.getEffectRange() : 200))
++		{
++			if ((target instanceof Player) && (target != player))
++			{
++				Player targetPlayer = (Player) target;
++				if ((player.isInDuel() && targetPlayer.isInDuel()) || (player.isInSiege() && targetPlayer.isInSiege()) || (player.isInOlympiadMode() && targetPlayer.isInOlympiadMode()) || (player.atWarWith(targetPlayer)) || (player.isInCombat() && target.isInCombat()))
++				{
++					
++					for (WeakReference<Creature> weakRef : player.getAttackByList())
++					{
++						if (weakRef.get() == target)
++						{
++							return true;
++						}
++					}
++					
++					for (WeakReference<Creature> weakRef : target.getAttackByList())
++					{
++						if (weakRef.get() == player)
++						{
++							return true;
++						}
++					}
++				}
++			}
++		}
++		return false;
++	}
++	
++	private void removeSupportBuffs(Player player)
++	{
++		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, SUPPORT_SKILL_1_ID);
++		player.getEffectList().stopSkillEffects(SkillFinishType.REMOVED, SUPPORT_SKILL_2_ID);
++	}
++	
++	private void cancelBuffs(Player player)
++	{
++		Npc buffNpc = playerNpcMap.remove(player.getObjectId());
++		if (buffNpc != null)
++		{
++			buffNpc.deleteMe();
++		}
++		buffActive.put(player.getObjectId(), false);
++		removeSupportBuffs(player);
++		player.sendMessage("You successfully canceled NPC Support.");
++		player.sendPacket(new SystemMessage(3832).addString("Follow NPC Buff"));
++	}
++	
++	public static void main(String[] args)
++	{
++		new BuffFollow();
++	}
++}
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/ShopBuffPlayer.java dist/game/data/scripts/custom/ShopBuffPlayer/ShopBuffPlayer.java
+new file mode 100644
+index 0000000..45134f2
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/ShopBuffPlayer.java
+@@ -0,0 +1,303 @@
++/*
++ * This file is part of the L2J Mobius project.
++ * 
++ * This program is free software: you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation, either version 3 of the License, or
++ * (at your option) any later version.
++ * 
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
++ * General Public License for more details.
++ * 
++ * You should have received a copy of the GNU General Public License
++ * along with this program. If not, see <http://www.gnu.org/licenses/>.
++ */
++package custom.ShopBuffPlayer;
++
++import org.l2jmobius.gameserver.enums.ChatType;
++import org.l2jmobius.gameserver.model.actor.Npc;
++import org.l2jmobius.gameserver.model.actor.Player;
++import org.l2jmobius.gameserver.model.holders.SkillHolder;
++import org.l2jmobius.gameserver.model.skill.SkillCaster;
++
++import ai.AbstractNpcAI;
++
++/**
++ * @author Notorion version Classic Interlude
++ */
++public class ShopBuffPlayer extends AbstractNpcAI
++{
++	// NPC
++	private static final int SHOP_NPC = 888899; // ID do NPC ShopBuffPlayer
++	// Coin
++	private static final int ADENA = 57; // ID (Adena)
++	private static final int ADENA2 = 48472; // ID Einhasad Golden Coin
++	// Price Coin
++	private static final long LEVEL_UP_COST = 50000000; // Adenas to Level
++	// Items
++	private static final int[] ITEM_SET_1 =
++	{
++		356,
++		2438,
++		2414,
++		2497
++	
++	}; // Full Plate
++	private static final int[] ITEM_SET_2 =
++	{
++		32108,
++		32109,
++		32110,
++		31713
++	}; // Drake Leather
++	private static final int[] ITEM_SET_3 =
++	{
++		31884,
++		31883,
++		31885
++	}; // Divine Robe
++	private static final int[] ITEM_SET_4 =
++	{
++		32007,
++		32004,
++		32005
++	}; // Jewel of Seal
++	private static final int[] ITEM_SET_5 =
++	{
++		80133,
++		15452
++	}; // Exemple off
++	
++	// Buffs
++	private static final SkillHolder[] SHOP_BUFFS =
++	{
++		new SkillHolder(4324, 1),
++		new SkillHolder(4325, 1),
++		new SkillHolder(4326, 1),
++		new SkillHolder(4327, 1),
++		new SkillHolder(4328, 1),
++		new SkillHolder(4329, 1),
++		new SkillHolder(4322, 1),
++		new SkillHolder(4323, 1),
++		new SkillHolder(7050, 1),
++		new SkillHolder(7054, 1),
++	};
++	
++	private ShopBuffPlayer()
++	{
++		addStartNpc(SHOP_NPC);
++		addTalkId(SHOP_NPC);
++		addFirstTalkId(SHOP_NPC);
++	}
++	
++	@Override
++	public String onEvent(String event, Npc npc, Player player)
++	{
++		String htmltext = null;
++		switch (event)
++		{
++			case "buy_buffs":
++			{
++				if (getQuestItemsCount(player, ADENA) >= 5000000)
++				{
++					takeItems(player, ADENA, 5000000);
++					for (SkillHolder holder : SHOP_BUFFS)
++					{
++						SkillCaster.triggerCast(npc, player, holder.getSkill());
++					}
++					npc.broadcastSay(ChatType.NPC_GENERAL, "Hi " + player.getName() + ", you bought buffs, enjoy!");
++					
++					htmltext = "npc_buff_thank_you.html";
++				}
++				else
++				{
++					htmltext = "npc_no_adena_buff.html";
++				}
++				break;
++			}
++			case "buy_item_set_1":
++			{ // Full Plate
++				htmltext = "npc_item_set_1.html";
++				break;
++			}
++			case "buy_item_set_2":
++			{ // Drake Leather
++				htmltext = "npc_item_set_2.html";
++				break;
++			}
++			case "buy_item_set_3":
++			{ // Divine Robe
++				htmltext = "npc_item_set_3.html";
++				break;
++			}
++			case "buy_item_set_4":
++			{ // Jewel of Seal
++				htmltext = "npc_item_set_4.html";
++				break;
++			}
++			case "confirm_buy_item_set_1":
++			{
++				int moeda = ADENA;
++				if (getQuestItemsCount(player, moeda) >= 30000000)
++				{
++					takeItems(player, moeda, 30000000);
++					for (int itemId : ITEM_SET_1)
++					{
++						giveItems(player, itemId, 1);
++					}
++					npc.broadcastSay(ChatType.NPC_GENERAL, player.getName() + " acquired a set heavy for a great price");
++					
++					htmltext = "npc_item_thank_you.html";
++				}
++				else
++				{
++					htmltext = "npc_no_adena_item.html";
++				}
++				break;
++			}
++			case "confirm_buy_item_set_2":
++			{
++				int moeda = ADENA;
++				if (getQuestItemsCount(player, moeda) >= 25000000)
++				{
++					takeItems(player, moeda, 25000000);
++					for (int itemId : ITEM_SET_2)
++					{
++						giveItems(player, itemId, 1);
++					}
++					npc.broadcastSay(ChatType.NPC_GENERAL, player.getName() + " acquired a set leather for a great price");
++					
++					htmltext = "npc_item_thank_you.html";
++				}
++				else
++				{
++					htmltext = "npc_no_adena_item.html";
++				}
++				break;
++			}
++			case "confirm_buy_item_set_3":
++			{
++				int moeda = ADENA;
++				if (getQuestItemsCount(player, moeda) >= 35000000)
++				{
++					takeItems(player, moeda, 35000000);
++					for (int itemId : ITEM_SET_3)
++					{
++						giveItems(player, itemId, 1);
++					}
++					npc.broadcastSay(ChatType.NPC_GENERAL, player.getName() + " acquired a set Robe for a great price");
++					
++					htmltext = "npc_item_thank_you.html";
++				}
++				else
++				{
++					htmltext = "npc_no_adena_item.html";
++				}
++				break;
++			}
++			case "confirm_buy_item_set_4":
++			{
++				int moeda = ADENA2;
++				if (getQuestItemsCount(player, moeda) >= 2000)
++				{
++					takeItems(player, moeda, 2000);
++					for (int itemId : ITEM_SET_4)
++					{
++						giveItems(player, itemId, 1);
++					}
++					npc.broadcastSay(ChatType.NPC_GENERAL, player.getName() + " Purchased Jewelry Seal for a great price");
++					
++					htmltext = "npc_item_thank_you.html";
++				}
++				else
++				{
++					htmltext = "npc_no_einhasad_item.html";
++				}
++				break;
++			}
++			case "buy_item_set_5":
++			{
++				int moeda = ADENA;
++				if (getQuestItemsCount(player, moeda) >= 6000000)
++				{
++					takeItems(player, moeda, 6000000);
++					
++					for (int itemId : ITEM_SET_5)
++					{
++						giveItems(player, itemId, 1);
++					}
++					
++					htmltext = "npc_item_thank_you.html";
++				}
++				else
++				{
++					htmltext = "npc_no_adena_item.html";
++				}
++				break;
++				
++			}
++			
++			case "choose_level":
++				htmltext = "npc_choose_level.html";
++				break;
++			case "level_9":
++				htmltext = adjustPlayerLevel(player, 9, npc);
++				break;
++			case "level_14":
++				htmltext = adjustPlayerLevel(player, 14, npc);
++				break;
++			case "level_18":
++				htmltext = adjustPlayerLevel(player, 18, npc);
++				break;
++			default:
++				htmltext = "npc_default.html";
++				break;
++		}
++		return htmltext;
++	}
++	
++	private String adjustPlayerLevel(Player player, int level, Npc npc)
++	{
++		int currentLevel = player.getLevel();
++		
++		if (currentLevel >= level)
++		{
++			player.sendMessage("You are already at the level " + level + " or higher.");
++			return "npc_level_already_reached.html";
++		}
++		
++		if ((currentLevel == 18) || ((currentLevel == 14) && (level < 18)) || ((currentLevel == 9) && (level < 14)))
++		{
++			player.sendMessage("You can only advance to level ");
++			return "npc_level_change_not_allowed.html";
++		}
++		
++		if (getQuestItemsCount(player, ADENA) >= LEVEL_UP_COST)
++		{
++			takeItems(player, ADENA, LEVEL_UP_COST);
++			setPlayerLevel(player, level);
++			
++			npc.broadcastSay(ChatType.NPC_GENERAL, "Congratulations! " + player.getName() + " now it is Level " + level);
++			return "npc_level_up_success.html";
++		}
++		
++		return "npc_no_adena_level.html";
++	}
++	
++	private void setPlayerLevel(Player player, int level)
++	{
++		if ((level >= 1) && (level <= 120))
++		{
++			long exp = player.getStat().getExpForLevel(level);
++			player.getStat().addExp(exp - player.getExp());
++			player.broadcastUserInfo();
++		}
++	}
++	
++	public static void main(String[] args)
++	{
++		new ShopBuffPlayer();
++	}
++}
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/buff_cancelled.html dist/game/data/scripts/custom/ShopBuffPlayer/buff_cancelled.html
+new file mode 100644
+index 0000000..195aba8
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/buff_cancelled.html
+@@ -0,0 +1,6 @@
++<html><body><br><br><br><br>
++    <center>
++        <font name="hs12" color="LEVEL">NPC Follow cancelled!</font>
++    </center><br><br>
++	<td><button value="Back" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer 888899.html" width=80 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/buff_npc_menu.html dist/game/data/scripts/custom/ShopBuffPlayer/buff_npc_menu.html
+new file mode 100644
+index 0000000..7e20484
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/buff_npc_menu.html
+@@ -0,0 +1,32 @@
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++    <tr><td height=30></td></tr>
++    <tr><td align=center><font name="hs9" color="LEVEL">Hello, adventurer!</font></td></tr>
++    <tr><td align=center>I can offer you useful buffs and some special items.</td></tr>
++    <tr><td align=center>See the options below:</td></tr>
++    <tr><td height=30></td></tr>
++    <tr>
++        <td align=center>
++            <button value="Buff Follow - 5 million Adenas" action="bypass -h npc_%objectId%_Quest BuffFollow follow_buffs" msg="Take" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++        </td>
++    </tr>
++    <tr><td height=10></td></tr>
++    <tr>
++        <td align=center>
++            <button value="unFollow Buff - Free" action="bypass -h npc_%objectId%_Quest BuffFollow cancel_buff" msg="Cancel" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++        </td>
++    </tr>
++    <tr><td height=10></td></tr>
++    <tr>
++        <td align=center>
++            <button value="Check Availability NPC" action="bypass -h npc_%objectId%_Quest BuffFollow showSchedule" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++        </td>
++    </tr>
++	    <tr><td height=10></td></tr>
++    <tr>
++        <td align=center>
++	            <button value="Store Follow" action="bypass -h npc_%objectId%_multisell 888855" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++				        </td>
++    </tr><tr><td height=35></td></tr>
++</table>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/buff_thank_you.html dist/game/data/scripts/custom/ShopBuffPlayer/buff_thank_you.html
+new file mode 100644
+index 0000000..dcf09bd
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/buff_thank_you.html
+@@ -0,0 +1,6 @@
++<html><body><br><br><br><br>
++    <center>
++        <font name="hs12" color="LEVEL">You active NPC Buff Follow!</font>
++    </center><br><br>
++	<td><button value="Back" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer 888899.html" width=80 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_buff_thank_you.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_buff_thank_you.html
+new file mode 100644
+index 0000000..bf1ea12
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_buff_thank_you.html
+@@ -0,0 +1,6 @@
++<html><body><br><br><br><br>
++<center>
++<font name="hs12" color="LEVEL">Gz! You've got yourself some new buffs!</font>
++</center><br><br>
++	<td><button value="Back" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer 888899.html" width=80 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_choose_level.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_choose_level.html
+new file mode 100644
+index 0000000..7bb507d
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_choose_level.html
+@@ -0,0 +1,27 @@
++<html>
++  <body>
++For which level are you interested in upgrading to? By paying a certain amount, you'll level up quickly. Check out the options below:<br1>
++<br1>
++<font color="LEVEL">Level Up::</font><br1>
++    <br>
++    		<table width=270 border=0 bgcolor="444444">
++	<tr>
++    <td><button value="Buy Level to 9" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer level_9" msg="Confirm level change?" width=102 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td><td><font color="LEVEL">Price 30.000.000</font></td></tr>
++</table><br><br1>
++    <br1>
++    <br>    		<table width=270 border=0 bgcolor="444444">
++	<tr>
++    <td><button value="Buy Level to 14" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer level_14" msg="Confirm level change?" width=102 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td><td><font color="LEVEL">Price 30.000.000</font></td></tr>
++</table><br><br1>
++    <br1>
++    <br>    		<table width=270 border=0 bgcolor="444444">
++	<tr>
++    <td><button value="Buy Level to 18" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer level_18" msg="Confirm level change?" width=102 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td><td><font color="LEVEL">Price 30.000.000</font></td></tr>
++</table><br><br1>
++    <br1>
++    <br><br>
++	<td><button value="Back" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer 888899.html" width=80 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
++    <font color="LEVEL"></font><br1>
++    
++  </body>
++</html>
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_default.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_default.html
+new file mode 100644
+index 0000000..a1d44ed
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_default.html
+@@ -0,0 +1,102 @@
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=292 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++    <tr><td height=15></td></tr>
++    <tr><td align=center>Here are the options I can offer you:</td></tr>
++    <tr><td align=center>buffs, some special items, and an NPC Support.</td></tr>
++    <tr><td height=4></td></tr>
++    <tr>
++        <td align=center>
++            <button value="Take Buffs" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer buy_buffs" msg="Confirm buy Buff? Buff 60min 5000000 Adenas" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++        </td>
++    </tr>
++    <tr><td height=3></td></tr>
++	    <tr>
++        <td align=center>
++            <button value="NPC Buff Follow" action="bypass -h npc_%objectId%_Quest BuffFollow open_npc_menu" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++        </td>
++    </tr>
++    <tr><td height=1></td></tr>  
++    <tr>
++        <td align=center>
++            <!-- Organizando os ícones lado a lado com uma tabela -->
++            <table border=0 cellpadding=0 cellspacing=0>
++                <tr>
++                    <td align="center">
++                        <img src="icon.armor_leather_helmet_i00" width=32 height=32>
++                    </td>
++                    <td align="center">
++                        <img src="icon.armor_t62_ul_i00" width=32 height=32>
++                    </td>
++					<td align="center">
++                        <img src="icon.armor_t62_g_i00" width=32 height=32>
++                    </td>
++					<td align="center">
++                        <img src="icon.armor_t62_b_i00" width=32 height=32>
++                    </td>
++                </tr>
++            </table>
++            <button value="Equip Heavy Grade C" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer buy_item_set_1" msg="Confirm buy Full Equip Heavy? Price 30000000 Adenas" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++        </td>
++    </tr>
++    <tr><td height=1></td></tr>
++    <tr>
++        <td align=center>
++            <!-- Repetindo a organização para mais ícones -->
++            <table border=0 cellpadding=0 cellspacing=0>
++                <tr>
++                    <td align="center">
++                        <img src="icon.armor_t21_ul_i00" width=32 height=32>
++                    </td>
++                    <td align="center">
++                        <img src="icon.armor_t21_g_i00" width=32 height=32>
++                    </td>
++					<td align="center">
++                        <img src="icon.armor_t21_b_i00" width=32 height=32>
++                    </td>
++                </tr>
++            </table>
++            <button value="Equip Leather Grade C" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer buy_item_set_2" msg="Confirm buy Full Equip Leather? Price 30000000 Adenas" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++        </td>
++    </tr>
++    <tr><td height=1></td></tr>
++    <tr>
++       <td align=center>
++            <!-- Repetindo a organização para mais ícones -->
++            <table border=0 cellpadding=0 cellspacing=0>
++                <tr>
++                    <td align="center">
++                        <img src="icon.armor_t57_u_i00" width=32 height=32>
++                    </td>
++                    <td align="center">
++                        <img src="icon.armor_t57_g_i00" width=32 height=32>
++                    </td>
++					<td align="center">
++                        <img src="icon.armor_t57_b_i00" width=32 height=32>
++                    </td>
++                </tr>
++            </table>
++            <button value="Equip Robe Grade C" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer buy_item_set_3" msg="Confirm buy Full Equip Robe? Price 30000000 Adenas" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++        </td>
++    </tr>
++    <tr><td height=1></td></tr>
++    <tr>
++        <td align=center>
++            <button value="Full Jewel of Seal Grade C" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer buy_item_set_4" msg="Confirm buy Jewel Brooch? Price 2000 Einhasad's" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++        </td>
++    </tr>
++    <tr><td height=1></td></tr>
++	    <tr>
++       <td align=center>
++            <!-- Repetindo a organização para mais ícones -->
++            <table border=0 cellpadding=0 cellspacing=0>
++                <tr>
++                    <td align="center">
++           <button value="Weapons" action="bypass -h npc_%objectId%_multisell 888899" width=110 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++                    </td>
++					<td align="center">
++            <button value="Take Level" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer choose_level" width=110 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++                    </td>
++                </tr>
++            </table></td></tr>
++</table>
++</body></html>
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_set_1.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_set_1.html
+new file mode 100644
+index 0000000..5316532
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_set_1.html
+@@ -0,0 +1,9 @@
++<html><body><br><br><center>
++    <center>
++        <font name="hs9" color="LEVEL">Do you really want to buy Full Plate Set for 30.000.000 adenas?</font>
++    </center><br><br>
++
++        <button value="Yes, I want to buy" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer confirm_buy_item_set_1" width=115 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
++        <button value="Cancel Purchase" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer npc_default.html" width=115 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
++    </center>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_set_2.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_set_2.html
+new file mode 100644
+index 0000000..981723c
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_set_2.html
+@@ -0,0 +1,9 @@
++<html><body><br><br><center>
++    <center>
++        <font name="hs9" color="LEVEL">Do you really want to buy Drake Leather Grade-C Set for 30.000.000 adenas?</font>
++    </center><br><br>
++
++        <button value="Yes, I want to buy" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer confirm_buy_item_set_2" width=115 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
++        <button value="Cancel Purchase" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer npc_default.html" width=115 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
++    </center>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_set_3.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_set_3.html
+new file mode 100644
+index 0000000..b97844f
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_set_3.html
+@@ -0,0 +1,9 @@
++<html><body><br><br><center>
++    <center>
++        <font name="hs9" color="LEVEL">Do you really want to buy 3pcs Divine Robe Grade-C Set for 30.000.000 adenas?</font>
++    </center><br><br>
++
++        <button value="Yes, I want to buy" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer confirm_buy_item_set_3" width=115 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
++        <button value="Cancel Purchase" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer npc_default.html" width=115 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
++    </center>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_set_4.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_set_4.html
+new file mode 100644
+index 0000000..e54f265
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_set_4.html
+@@ -0,0 +1,9 @@
++<html><body><br><br><center>
++    <center>
++        <font name="hs9" color="LEVEL">Do you really want to buy 3 Jewel of Seal for 30.000.000 adenas?</font>
++    </center><br><br>
++
++        <button value="Yes, I want to buy" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer confirm_buy_item_set_4" width=115 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
++        <button value="Cancel Purchase" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer npc_default.html" width=115 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
++    </center>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_thank_you.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_thank_you.html
+new file mode 100644
+index 0000000..facdb22
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_item_thank_you.html
+@@ -0,0 +1,9 @@
++<html>
++<body>
++    <br><br><br><br>
++    <center>
++        <font name="hs12" color="LEVEL">Your purchase was successful!</font>
++    </center><br><br>
++    <td><button value="Back" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer npc_default.html" width=80 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
++</body>
++</html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_level_already_reached.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_level_already_reached.html
+new file mode 100644
+index 0000000..bc7e105
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_level_already_reached.html
+@@ -0,0 +1,13 @@
++<html><body><table border=0 cellpadding=0 cellspacing=0 width=288 height=355 background="L2UI_CH3.refinewnd_back_Pattern">
++    <tr><td height=10></td></tr><center>
++    <tr><td align=center><font name="hs9" color="FF0000">You cannot go back to a lower level <br1>or choose the current level.</font></td></tr>
++    </center>
++<tr><td height=0></td></tr>
++    <tr>
++        <td align=center>
++            <button value="Back" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer npc_default.html" width=80 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++        </td>
++    </tr>
++ 
++</table></table>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_level_up_success.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_level_up_success.html
+new file mode 100644
+index 0000000..ec4db1a
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_level_up_success.html
+@@ -0,0 +1,8 @@
++<html>
++<body><br><br><br><br>
++    <center>
++        <font name="hs12" color="LEVEL">Congratulation, you change level!</font>
++    </center><br><br>
++	<td><button value="Back" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer 888899.html" width=80 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
++</body>
++</html>
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_menu.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_menu.html
+new file mode 100644
+index 0000000..4e2cdd1
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_menu.html
+@@ -0,0 +1,44 @@
++
++
++<html><body scroll="no">
++<table border=0 cellpadding=0 cellspacing=0 width=278 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
++    <tr><td height=15></td></tr>
++    <tr><td align=center>Greetings, adventurer!<br1> For your convenience, I will be available every hour to apply a buff. <font color="LEVEL">For the price of 5,000,000 adenas.</font></td></tr>
++    <tr><td height=7></td></tr>
++	
++	    <tr><td height=1></td></tr>
++	    <tr>
++       <td align=center>
++            <!-- Repetindo a organização para mais ícones -->
++            <table border=0 cellpadding=0 cellspacing=0>
++                <tr>
++                    <td align="center">
++           <button value="Active Buff Follow" action="bypass -h npc_%objectId%_Quest BuffFollow follow_buffs" msg="811;Confirm buy Suporte NPC Follow?" width=131 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++                    </td>
++					<td align="center">
++            <button value="unFollow Buff" action="bypass -h npc_%objectId%_Quest BuffFollow cancel_buff" msg="Confirm cancelar Suporte NPC Follow?" width=131 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++                    </td>
++                </tr>
++            </table></td></tr>
++    <tr><td height=11></td></tr>
++	    <tr><td align=center>To disable this feature, click "unFollow".</td></tr>    <tr><td height=7></td></tr>
++    <tr>
++        <td align=center>
++            <button value="Check Availability" action="bypass -h npc_%objectId%_Quest BuffFollow showSchedule" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++        </td>
++    </tr>
++    <tr><td height=2></td></tr>
++    <tr><td align=center>NPC Follow is available next to the player to grant special buffs with a duration of 5 seconds. By interacting with it, you will gain access to an exclusive menu. The NPC's reappearance can be disabled by clicking 'Unfollow,' logging out, or speaking to NPC Sonia, located near the city's Gatekeeper. NPC Follow will follow the player, even inside instances.
++
++<br1>Buff Follow provides support to the player in combat against monsters. If the player enters attack mode against another player, GrandBoss, RaidBoss, or gains Karma, the short-duration buffs will be immediately canceled.
++<br1>
++Only players who purchase the support of NPC Buff Follow can access the exclusive menu. To check real-time availability, select "Check Availability" in the menu.</td></tr>
++    <tr><td height=0></td></tr>
++    <tr>
++        <td align=center>
++            <button value="Back" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer npc_default.html" width=80 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
++        </td>
++    </tr>
++    <tr><td height=5></td></tr>
++</table>
++</body></html>
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_no_adena_buff.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_no_adena_buff.html
+new file mode 100644
+index 0000000..2fe3b13
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_no_adena_buff.html
+@@ -0,0 +1,6 @@
++<html><body><br><br><br><br>
++<center>
++<font name="hs12" color="LEVEL">Looks like you need more Adenas to get those top-tier Buffs!</font>
++</center><br><br>
++	<td><button value="Back" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer 888899.html" width=80 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_no_adena_item.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_no_adena_item.html
+new file mode 100644
+index 0000000..b6c730f
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_no_adena_item.html
+@@ -0,0 +1,6 @@
++<html><body><br><br><br><br>
++<center>
++<font name="hs12" color="LEVEL">Oh no! It looks like you don't have enough Adenas to buy that. </font>
++</center><br><br>
++	<td><button value="Back" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer 888899.html" width=80 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_no_adena_level.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_no_adena_level.html
+new file mode 100644
+index 0000000..6478208
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_no_adena_level.html
+@@ -0,0 +1,6 @@
++<html><body><br><br><br><br>
++    <center>
++        <font name="hs12" color="LEVEL">You don't have enough Adenas to level up.</font>
++    </center><br><br>
++	<td><button value="Back" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer 888899.html" width=80 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/npc_no_einhasad_item.html dist/game/data/scripts/custom/ShopBuffPlayer/npc_no_einhasad_item.html
+new file mode 100644
+index 0000000..fc3bf8a
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/npc_no_einhasad_item.html
+@@ -0,0 +1,6 @@
++<html><body><br><br><br><br>
++    <center>
++        <font name="hs12" color="LEVEL">You don't have enough Einhasad's Coin to complete the purchase!</font>
++    </center><br><br>
++	<td><button value="Back" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer 888899.html" width=80 height=28 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/custom/ShopBuffPlayer/schedule.txt dist/game/data/scripts/custom/ShopBuffPlayer/schedule.txt
+new file mode 100644
+index 0000000..0fc272b
+--- /dev/null
++++ dist/game/data/scripts/custom/ShopBuffPlayer/schedule.txt
+@@ -0,0 +1,7 @@
++MONDAY,true,0,0,23,59
++TUESDAY,true,0,0,23,59
++WEDNESDAY,true,0,0,23,59
++THURSDAY,true,14,0,22,1
++FRIDAY,false,0,0,0,0
++SATURDAY,true,0,0,24,0
++SUNDAY,true,2,34,23,59
+\ No newline at end of file
+diff --git dist/game/data/stats/npcs/custom/NPCsBuffFollow.xml dist/game/data/stats/npcs/custom/NPCsBuffFollow.xml
+new file mode 100644
+index 0000000..9ad08ef
+--- /dev/null
++++ dist/game/data/stats/npcs/custom/NPCsBuffFollow.xml
+@@ -0,0 +1,240 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
++	<npc id="888855" displayId="20621" level="62" type="Folk" name="Death Wave" usingServerSideName="true" title="Support" usingServerSideTitle="true">
++		<parameters>
++			<param name="MoveAroundSocial" value="0" />
++			<param name="MoveAroundSocial1" value="0" />
++			<param name="MoveAroundSocial2" value="0" />
++		</parameters>
++		<race>CONSTRUCT</race>
++		<sex>MALE</sex>
++		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
++			<vitals hp="1045.7706825" hpRegen="7.5" mp="970.845" mpRegen="2.7" />
++			<attack physical="573.236301" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="100" distance="100" width="120" />
++			<defence physical="233.9478818" magical="188.3122" />
++			<speed>
++				<walk ground="80" />
++				<run ground="174" />
++			</speed>
++			<hitTime>100</hitTime>
++		</stats>
++		<status  attackable="false" undying="true" />
++		<collision>
++			<radius normal="13" />
++			<height normal="22" />
++		</collision>
++	</npc>
++
++	<npc id="888856" displayId="30754" level="70" type="Folk" name="Gilmore" usingServerSideName="true" title="Support" usingServerSideTitle="true">
++		<parameters>
++			<param name="MoveAroundSocial" value="215" />
++			<param name="MoveAroundSocial1" value="215" />
++		</parameters>
++		<race>UNDEAD</race>
++		<sex>MALE</sex>
++		<equipment rhand="150" /> <!-- Elemental Sword -->
++		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
++			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
++			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="100" distance="100" width="120" />
++			<defence physical="295.91597" magical="216.53847" />
++			<speed>
++				<walk ground="40" />
++				<run ground="160" />
++			</speed>
++			<hitTime>170</hitTime>
++		</stats>
++		<status attackable="false" undying="true" />
++		<skillList>
++			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
++			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
++			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
++			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
++			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
++			<skill id="4412" level="11" /> <!-- Average P. Def. -->
++			<skill id="4413" level="11" /> <!-- Average M. Def. -->
++			<skill id="4414" level="2" /> <!-- Standard Type -->
++			<skill id="4415" level="3" /> <!-- One-handed Sword -->
++			<skill id="4416" level="1" /> <!-- Undead -->
++		</skillList>
++		<exCrtEffect>true</exCrtEffect>
++		<collision>
++			<radius normal="10" />
++			<height normal="25" />
++		</collision>
++	</npc>
++	<npc id="888857" displayId="31356" level="70" type="Folk" name="Remy" usingServerSideName="true" title="Support" usingServerSideTitle="true">
++		<parameters>
++			<param name="MoveAroundSocial" value="0" />
++			<param name="MoveAroundSocial1" value="110" />
++		</parameters>
++		<race>HUMAN</race>
++		<sex>MALE</sex>
++		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
++			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
++			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="100" distance="100" width="120" />
++			<defence physical="295.91597" magical="216.53847" />
++			<speed>
++				<walk ground="50" />
++				<run ground="120" />
++			</speed>
++		</stats>
++		<status attackable="false" />
++		<skillList>
++			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
++			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
++			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
++			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
++			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
++			<skill id="4412" level="11" /> <!-- Average P. Def. -->
++			<skill id="4413" level="11" /> <!-- Average M. Def. -->
++			<skill id="4414" level="2" /> <!-- Standard Type -->
++			<skill id="4415" level="3" /> <!-- One-handed Sword -->
++			<skill id="4416" level="14" /> <!-- Humans -->
++		</skillList>
++		<exCrtEffect>true</exCrtEffect>
++		<collision>
++			<radius normal="8" />
++			<height normal="25" />
++		</collision>
++	</npc>
++	<npc id="888858" displayId="31312" level="70" type="Folk" name="Durin" usingServerSideName="true" title="Support" usingServerSideTitle="true">
++		<!-- Confirmed CT2.5 -->
++		<parameters>
++			<param name="MoveAroundSocial" value="0" />
++			<param name="MoveAroundSocial1" value="93" />
++		</parameters>
++		<race>DWARF</race>
++		<sex>MALE</sex>
++		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
++			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
++			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
++			<defence physical="295.91597" magical="216.53847" />
++			<speed>
++				<walk ground="50" />
++				<run ground="120" />
++			</speed>
++		</stats>
++		<status attackable="false" />
++		<skillList>
++			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
++			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
++			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
++			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
++			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
++			<skill id="4412" level="11" /> <!-- Average P. Def. -->
++			<skill id="4413" level="11" /> <!-- Average M. Def. -->
++			<skill id="4414" level="2" /> <!-- Standard Type -->
++			<skill id="4415" level="3" /> <!-- One-handed Sword -->
++			<skill id="4416" level="18" /> <!-- Dwarves -->
++		</skillList>
++		<exCrtEffect>true</exCrtEffect>
++
++		<collision>
++			<radius normal="8" />
++			<height normal="17" />
++		</collision>
++	</npc>
++
++	<npc id="888859" displayId="30067" level="70" type="Folk" name="Glyvka" usingServerSideName="true" title="Support" usingServerSideTitle="true">
++		<parameters>
++			<param name="MoveAroundSocial" value="0" />
++			<param name="MoveAroundSocial1" value="120" />
++		</parameters>
++		<race>HUMAN</race>
++		<sex>FEMALE</sex>
++		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
++			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
++			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="100" distance="100" width="120" />
++			<defence physical="295.91597" magical="216.53847" />
++			<speed>
++				<walk ground="50" />
++				<run ground="120" />
++			</speed>
++			<abnormalResist physical="10" magical="10" />
++		</stats>
++		<status attackable="false" undying="true" />
++		<skillList>
++			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
++			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
++			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
++			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
++			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
++			<skill id="4412" level="11" /> <!-- Average P. Def. -->
++			<skill id="4413" level="11" /> <!-- Average M. Def. -->
++			<skill id="4414" level="2" /> <!-- Standard Type -->
++			<skill id="4415" level="3" /> <!-- One-handed Sword -->
++			<skill id="4416" level="14" /> <!-- Humans -->
++		</skillList>
++		<exCrtEffect>true</exCrtEffect>
++		<collision>
++			<radius normal="8" />
++			<height normal="22.5" />
++		</collision>
++	</npc>
++	<npc id="888860" displayId="30070" level="70" type="Folk" name="Sylvain" usingServerSideName="true" title="Support" usingServerSideTitle="true">
++		<parameters>
++			<param name="MoveAroundSocial" value="0" />
++			<param name="MoveAroundSocial1" value="135" />
++		</parameters>
++		<race>HUMAN</race>
++		<sex>MALE</sex>
++		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
++			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
++			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="100" distance="100" width="120" />
++			<defence physical="295.91597" magical="216.53847" />
++			<speed>
++				<walk ground="50" />
++				<run ground="120" />
++			</speed>
++			<hitTime>600</hitTime>
++			<attribute>
++				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
++			</attribute>
++			<abnormalResist physical="10" magical="10" />
++		</stats>
++		<status attackable="true"  />
++		<skillList>
++			<skill id="4416" level="14" /> <!-- Humans -->
++			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
++			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
++			<skill id="4410" level="11" /> <!-- Average Damage Dealer -->
++			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
++			<skill id="4412" level="11" /> <!-- Average P. Def. -->
++			<skill id="4413" level="11" /> <!-- Average M. Def. -->
++			<skill id="4414" level="2" /> <!-- Standard Type -->
++			<skill id="4415" level="3" /> <!-- One-handed Sword -->
++			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
++		</skillList>
++		<exCrtEffect>true</exCrtEffect>
++		<collision>
++			<radius normal="8" />
++			<height normal="24" />
++		</collision>
++	</npc>
++<npc id="888899" displayId="30062" level="70" name="Sonia" usingServerSideName="true" title="Support" usingServerSideTitle="true" type="Folk">
++		<!-- AUTO GENERATED NPC TODO: FIX IT -->
++		
++		<parameters>
++			<param name="MoveAroundSocial" value="0" />
++			<param name="MoveAroundSocial1" value="85" />
++		</parameters>
++		
++		<race>HUMAN</race>
++		<sex>FEMALE</sex>
++		<stats str="88" int="150" dex="55" wit="150" con="82" men="150">
++			<vitals hp="2538603" hpRegen="13.4" mp="3190" mpRegen="30" />
++			<attack physical="319843" magical="291506" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
++			<defence physical="150648" magical="729046" />
++			<speed>
++				<walk ground="1" />
++				<run ground="0" />
++			</speed>
++			<hitTime>600</hitTime>
++		</stats>
++		<status attackable="false" undying="true" canMove="false" />
++		<collision>
++			<radius normal="32" />
++			<height normal="81" />
++		</collision>
++	</npc>
++</list>
+\ No newline at end of file
+diff --git dist/game/data/stats/skills/custom/SkillsBuffFollow.xml dist/game/data/stats/skills/custom/SkillsBuffFollow.xml
+new file mode 100644
+index 0000000..ffb9e1f
+--- /dev/null
++++ dist/game/data/stats/skills/custom/SkillsBuffFollow.xml
+@@ -0,0 +1,260 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/skills.xsd">
++	<skill id="888860" displayId="7064" toLevel="1" name="Chant of Victory Buff Follow">
++		<!-- Recovers HP by 20%, and for 1 hour, receives help from a great spirit to increase Max HP by 20%, the chance of prominent damage occurring through magic damage by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and Accuracy by 4. -->
++		<icon>icon.skill1363</icon>
++		<abnormalLevel>2</abnormalLevel>
++		<abnormalTime>5</abnormalTime>
++		<abnormalType>MULTI_BUFF</abnormalType>
++
++		<effectPoint>1</effectPoint>
++		<effectRange>1500</effectRange>
++
++		<isMagic>2</isMagic> <!-- Static Skill -->
++		<magicLevel>78</magicLevel>
++		<mpConsume>2</mpConsume>
++		<operateType>A2</operateType>
++		<basicProperty>NONE</basicProperty>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<reuseDelay>10000</reuseDelay>
++		<targetType>TARGET</targetType>
++		<affectScope>SINGLE</affectScope>
++		<effects>
++			<effect name="DispelBySlotProbability">
++				<dispel>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</dispel>
++				<rate>100</rate>
++			</effect>
++			<effect name="BlockAbnormalSlot">
++				<slot>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</slot>
++			</effect>
++			<effect name="MaxHp">
++				<amount>20</amount>
++				<mode>PER</mode>
++				<heal>true</heal>
++			</effect>
++			<effect name="PAtk">
++				<amount>10</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="MAtk">
++				<amount>20</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="Speed">
++				<amount>-20</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="MagicalDefence">
++				<amount>20</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="PhysicalDefence">
++				<amount>20</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="Accuracy">
++				<amount>4</amount>
++				<mode>DIFF</mode>
++			</effect>
++			<effect name="PhysicalAttackSpeed">
++				<amount>20</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="MagicalAttackSpeed">
++				<amount>20</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="CriticalDamage">
++				<amount>20</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="ResistAbnormalByCategory">
++				<amount>-10</amount>
++				<slot>DEBUFF</slot>
++			</effect>
++			<effect name="MagicCriticalRate">
++				<amount>2</amount>
++				<mode>DIFF</mode>
++			</effect>
++		</effects>
++	</skill>
++	<skill id="888861" displayId="7056" toLevel="1" name="Berserker Spirit Buff Follow">
++		<!-- For 5 seg, decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8. -->
++		<icon>icon.skill1062</icon>
++		<abnormalLevel>3</abnormalLevel>
++		<abnormalTime>5</abnormalTime>
++		<abnormalType>BERSERKER</abnormalType>
++		<castRange>900</castRange>
++		<effectPoint>1</effectPoint>
++		<effectRange>1500</effectRange>
++		<hitTime>500</hitTime>
++		<isMagic>2</isMagic> <!-- Static Skill -->
++		<magicLevel>52</magicLevel>
++		<mpConsume>2</mpConsume>
++		<operateType>A2</operateType>
++		<basicProperty>NONE</basicProperty>
++		<magicCriticalRate>-5</magicCriticalRate>
++		<reuseDelay>10000</reuseDelay>
++		<targetType>TARGET</targetType>
++		<affectScope>SINGLE</affectScope>
++		<effects>
++			<effect name="PAtk">
++				<amount>8</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="MAtk">
++				<amount>16</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="Speed">
++				<amount>8</amount>
++				<mode>DIFF</mode>
++			</effect>
++			<effect name="MagicalDefence">
++				<amount>-16</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="PhysicalDefence">
++				<amount>-8</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="PhysicalEvasion">
++				<amount>-4</amount>
++				<mode>DIFF</mode>
++			</effect>
++			<effect name="PhysicalAttackSpeed">
++				<amount>8</amount>
++				<mode>PER</mode>
++			</effect>
++			<effect name="MagicalAttackSpeed">
++				<amount>8</amount>
++				<mode>PER</mode>
++			</effect>
++		</effects>
++	</skill>
++	<skill id="888862" displayId="271" toLevel="1" name="Dance of the Warrior Buff Follow">
++		<!-- Increases P. Atk. by 12% for 1 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
++		<icon>icon.skill0271</icon>
++		<abnormalLevel>1</abnormalLevel>
++		<abnormalTime>
++			<value level="1">60</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">125</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">131</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">136</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1004" toSubLevel="1004">142</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1005" toSubLevel="1005">147</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1006" toSubLevel="1006">153</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1007" toSubLevel="1007">158</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1008" toSubLevel="1008">164</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1009" toSubLevel="1009">169</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1010" toSubLevel="1010">175</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1011">180</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1012" toSubLevel="1012">186</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1013" toSubLevel="1013">191</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1014" toSubLevel="1014">197</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1015" toSubLevel="1015">202</value>
++		</abnormalTime>
++		<abnormalType>DANCE_OF_WARRIOR</abnormalType>
++		<affectRange>1000</affectRange>
++		<effectPoint>523</effectPoint>
++		<hitTime>2500</hitTime>
++		<isMagic>3</isMagic> <!-- Dance Skill -->
++		<magicLevel>55</magicLevel>
++		<mpConsume>
++			<value level="1">60</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2001">58</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2002" toSubLevel="2002">57</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2003" toSubLevel="2003">56</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2004" toSubLevel="2004">55</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2005" toSubLevel="2005">53</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2006" toSubLevel="2006">52</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2007" toSubLevel="2007">51</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2008" toSubLevel="2008">50</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2009" toSubLevel="2009">48</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2010" toSubLevel="2010">47</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2011" toSubLevel="2011">46</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2012" toSubLevel="2012">45</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2013" toSubLevel="2013">43</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2014" toSubLevel="2014">42</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2015" toSubLevel="2015">41</value>
++		</mpConsume>
++		<operateType>A2</operateType>
++		<reuseDelay>65000</reuseDelay>
++		<basicProperty>NONE</basicProperty>
++		<magicCriticalRate>5</magicCriticalRate>
++		<targetType>SELF</targetType>
++		<affectScope>SINGLE</affectScope>
++		<affectObject>FRIEND</affectObject>
++		<conditions>
++		</conditions>
++		<effects>
++			<effect name="PAtk">
++				<amount>12</amount>
++				<mode>PER</mode>
++			</effect>
++		</effects>
++	</skill>
++	
++	<skill id="888863" displayId="273" toLevel="1" name="Dance of the Mystic Buff Follow">
++		<!-- M. Atk. by 20% for 1 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
++		<icon>icon.skill0273</icon>
++		<abnormalLevel>1</abnormalLevel>
++		<abnormalTime>
++			<value level="1">60</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">125</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">131</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">136</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1004" toSubLevel="1004">142</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1005" toSubLevel="1005">147</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1006" toSubLevel="1006">153</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1007" toSubLevel="1007">158</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1008" toSubLevel="1008">164</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1009" toSubLevel="1009">169</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1010" toSubLevel="1010">175</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1011">180</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1012" toSubLevel="1012">186</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1013" toSubLevel="1013">191</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1014" toSubLevel="1014">197</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="1015" toSubLevel="1015">202</value>
++		</abnormalTime>
++		<abnormalType>DANCE_OF_MYSTIC</abnormalType>
++		<affectRange>1000</affectRange>
++		<effectPoint>467</effectPoint>
++		<hitTime>2500</hitTime>
++		<isMagic>3</isMagic> <!-- Dance Skill -->
++		<magicLevel>49</magicLevel>
++		<mpConsume>
++			<value level="1">60</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2001">58</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2002" toSubLevel="2002">57</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2003" toSubLevel="2003">56</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2004" toSubLevel="2004">55</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2005" toSubLevel="2005">53</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2006" toSubLevel="2006">52</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2007" toSubLevel="2007">51</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2008" toSubLevel="2008">50</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2009" toSubLevel="2009">48</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2010" toSubLevel="2010">47</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2011" toSubLevel="2011">46</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2012" toSubLevel="2012">45</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2013" toSubLevel="2013">43</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2014" toSubLevel="2014">42</value>
++			<value fromLevel="1" toLevel="1" fromSubLevel="2015" toSubLevel="2015">41</value>
++		</mpConsume>
++		<operateType>A2</operateType>
++		<reuseDelay>65000</reuseDelay>
++		<basicProperty>NONE</basicProperty>
++		<magicCriticalRate>5</magicCriticalRate>
++		<targetType>SELF</targetType>
++		<affectScope>SINGLE</affectScope>
++		<affectObject>FRIEND</affectObject>
++		<effects>
++			<effect name="MAtk">
++				<amount>20</amount>
++				<mode>PER</mode>
++			</effect>
++		</effects>
++	</skill>
++	
++	
++</list>
+\ No newline at end of file
