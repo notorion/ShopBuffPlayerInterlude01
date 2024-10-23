@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+    <npcs>
+        <npc>888855</npc> <!-- ID do BuffFollow -->
+        <npc>888856</npc> <!-- ID do BuffFollow -->
+        <npc>888857</npc> <!-- ID do BuffFollow -->
+        <npc>888858</npc> <!-- ID do BuffFollow -->
+        <npc>888859</npc> <!-- ID do BuffFollow -->
+        <npc>888860</npc> <!-- ID do BuffFollow -->
+    </npcs>
+	<item>
+		<!-- Adena -->
+		<ingredient count="55000000" id="57" />
+		<!-- Spirit Ore -->
+		<production count="100000" id="3031" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="35000000" id="57" />
+		<!-- SoulStone -->
+		<production count="100000" id="1785" />
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="2000000" id="57" />
+		<!-- Blessed Ress -->
+		<production count="1" id="22623" />
+
+	</item>
+	<item>
+		<!-- Adena -->
+		<ingredient count="5000000" id="57" />
+		<!-- Blessed Escape -->
+		<production count="10" id="21195" />
+	</item>
+</list>
