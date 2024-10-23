@@ -1,0 +1,39 @@
+I created two scripts that work together to simplify some in-game tasks, eliminating the need to use GM commands.
+
+First Script - Shop and Buffs:
+
+The main NPC opens a menu with several options:
+
+1-hour Emperor’s buffs.
+Full R110 equipment (Heavy, Leather, and Robe) delivered according to the player's choice.
+Option to get all Brooch level 4 jewels at once.
+A multisell with various items.
+Multisell weapons.
+A button to increase the player's level to 9, 14, or 18.
+All of these options can be customized in the script, including buffs, items, and currencies.
+
+Second Script - Buff Follow:
+
+Buff Follow is an NPC activated by the player through the menu of the first script. After being activated, the NPC follows the player wherever they go, whether in open areas or closed instances. It provides 1-hour buffs (Emperor’s) and special buffs of 5 seconds, reused every 10 seconds for 1 minute.
+
+Buff Follow NPC Rules:
+
+The NPC follows the player at a fixed distance.
+It delivers two special buffs, each lasting 5 seconds.
+The NPC only provides these special buffs when the player is in combat against monsters (type="Monster").
+The special buffs are canceled when the player enters combat against other players, GrandBoss, RaidBoss, duels, PvP, sieges, Olympiads, or gets karma.
+Other Details:
+
+If the NPC can't keep up with the player, it teleports near the player.
+If the player teleports to another city, the NPC will appear next to them.
+The NPC can be deactivated through its own menu or the Sonia NPC (from the first script).
+When deactivated, the NPC immediately disappears and unlinks from the player.
+If the player disconnects, the NPC is also deactivated, so it must be reactivated via the Sonia NPC.
+The NPC that follows the player is randomly chosen from 5 predefined NPCs, which can be modified in the custom NPC file.
+After activating the Buff Follow NPC, no other player will be able to access the NPC’s menu, only the owner.
+NPC Time Settings and Control:
+
+In the script folder, there is a TXT file that allows scheduling the NPC's activation days and times, whether to be online or offline.
+The script has a counter that checks if the TXT file has been modified for different times.
+You need to adjust the script's update interval according to your preference. Removing the ‘Logger’ might be necessary after sufficient testing.
+The Buff Follow’s available times are updated in real-time in the game.
