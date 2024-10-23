@@ -1,0 +1,44 @@
+
+
+<html><body scroll="no">
+<table border=0 cellpadding=0 cellspacing=0 width=278 height=358 background="L2UI_CH3.refinewnd_back_Pattern">
+    <tr><td height=15></td></tr>
+    <tr><td align=center>Greetings, adventurer!<br1> For your convenience, I will be available every hour to apply a buff. <font color="LEVEL">For the price of 5,000,000 adenas.</font></td></tr>
+    <tr><td height=7></td></tr>
+	
+	    <tr><td height=1></td></tr>
+	    <tr>
+       <td align=center>
+            <!-- Repetindo a organização para mais ícones -->
+            <table border=0 cellpadding=0 cellspacing=0>
+                <tr>
+                    <td align="center">
+           <button value="Active Buff Follow" action="bypass -h npc_%objectId%_Quest BuffFollow follow_buffs" msg="811;Confirm buy Suporte NPC Follow?" width=131 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
+                    </td>
+					<td align="center">
+            <button value="unFollow Buff" action="bypass -h npc_%objectId%_Quest BuffFollow cancel_buff" msg="Confirm cancelar Suporte NPC Follow?" width=131 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
+                    </td>
+                </tr>
+            </table></td></tr>
+    <tr><td height=11></td></tr>
+	    <tr><td align=center>To disable this feature, click "unFollow".</td></tr>    <tr><td height=7></td></tr>
+    <tr>
+        <td align=center>
+            <button value="Check Availability" action="bypass -h npc_%objectId%_Quest BuffFollow showSchedule" width=200 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
+        </td>
+    </tr>
+    <tr><td height=2></td></tr>
+    <tr><td align=center>NPC Follow is available next to the player to grant special buffs with a duration of 5 seconds. By interacting with it, you will gain access to an exclusive menu. The NPC's reappearance can be disabled by clicking 'Unfollow,' logging out, or speaking to NPC Sonia, located near the city's Gatekeeper. NPC Follow will follow the player, even inside instances.
+
+<br1>Buff Follow provides support to the player in combat against monsters. If the player enters attack mode against another player, GrandBoss, RaidBoss, or gains Karma, the short-duration buffs will be immediately canceled.
+<br1>
+Only players who purchase the support of NPC Buff Follow can access the exclusive menu. To check real-time availability, select "Check Availability" in the menu.</td></tr>
+    <tr><td height=0></td></tr>
+    <tr>
+        <td align=center>
+            <button value="Back" action="bypass -h npc_%objectId%_Quest ShopBuffPlayer npc_default.html" width=80 height=31 back="L2UI_CT1.OlympiadWnd_DF_Info_Down" fore="L2UI_CT1.OlympiadWnd_DF_Info">
+        </td>
+    </tr>
+    <tr><td height=5></td></tr>
+</table>
+</body></html>
