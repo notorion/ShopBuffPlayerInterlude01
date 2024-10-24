@@ -1,0 +1,60 @@
+BuffFollow Script FAQ
+
+Description
+The BuffFollow script adds an NPC that follows the player and provides buffs automatically. It is designed to be simple and efficient, ideal for servers with many players.
+
+Features
+Support NPCs: The script uses a set of NPCs that provide support buffs to the player.
+Following: The selected NPC follows the player automatically, inside and outside instances.
+Teleport: If the player moves too far away from the NPC, it teleports close to the player.
+Restrictions: The script prevents the use of buffs in PvP situations, boss fights, and when using AoE skills on enemy players.
+Scheduling: The NPC can be activated and deactivated at specific times, configurable for each day of the week.
+Reuse Time: The script has a reuse time to prevent excessive use of the buffs.
+Interface: The script displays a graphical interface with information about the NPC's availability schedule.
+Function Details
+SHOP_NPC: ID of the NPC that sells the buffs.
+FOLLOW_BUFF_NPCS: Array with the IDs of the NPCs that follow the player.
+BUFF_PRICE: Price of the buffs in adenas.
+BUFF_DELAY: Delay time for the NPC to respawn after being canceled.
+NPC_DURATION: Duration of the NPC before it is automatically canceled.
+SHOP_BUFFS: Array with the buffs that the NPC provides.
+SUPPORT_SKILL_1_ID and SUPPORT_SKILL_2_ID: IDs of the support skills used by the NPC.
+TELEPORT_DISTANCE: Maximum distance the player can move away from the NPC before it teleports.
+CHECK_INSTANCE_DELAY: Time interval to check if the player has changed instance.
+DaySchedule: Class that stores the scheduling settings for each day of the week.
+SCHEDULE: Array with the scheduling settings for each day of the week.
+playerNpcMap: Map that stores the NPC associated with each player.
+buffActive: Map that indicates whether the NPC is active for each player.
+_reuseTime: Map that stores the reuse time of the buffs for each player.
+blockTimer: Map that stores the block time of the buffs for each player, after use in invalid conditions.
+_random: Object to generate random numbers.
+BuffFollow(): Class constructor, which registers events and starts timers.
+onNpcTeleported(OnNpcTeleport event): Method called when the NPC is teleported.
+onSpawn(Npc npc): Method called when the NPC is spawned.
+onEvent(String event, Npc npc, Player player): Method that handles script events.
+checkNpcSchedule(): Method that checks the NPC schedule and activates or deactivates it according to the day and time.
+showScheduleHtml(Player player, boolean showActivationMessage): Method that generates and displays the HTML with the schedule table to the player.
+getDayOfWeekName(int dayOfWeek): Method that returns the day of the week name.
+getGmtOffset(): Method that returns the player's GMT offset.
+isNpcActive(): Method that checks if the NPC is currently active, according to the schedule.
+checkPlayerInstance(): Method that checks if the player is in an instance and teleports the NPC to the same instance, if necessary.
+onFirstTalk(Npc npc, Player player): Method called when the player first talks to the NPC.
+applyBuffs(Player player): Method that applies the buffs to the player.
+applySupportSkills(Npc npc, Player player): Method that applies the NPC's support skills to the player.
+shouldRemoveBuffs(Player player): Method that checks whether the buffs should be removed from the player, according to the script restrictions.
+isPlayerUsingAreaSkill(Player player): Method that checks if the player is using an AoE skill.
+isAreaSkill(Skill skill): Method that checks if a skill is an AoE.
+checkAreaSkillTargets(Player player, Skill skill): Method that checks if the player is using an AoE skill on an invalid target.
+removeSupportBuffs(Player player): Method that removes the support buffs from the player.
+cancelBuffs(Player player): Method that cancels the buffs and removes the NPC from the player.
+
+Notes
+The script is designed to be used with the L2jMobius server.
+It is necessary to configure the NPC IDs, buffs, and support skills according to your server.
+The NPC scheduling can be customized in the SCHEDULE array.
+The script prevents the use of buffs in invalid situations, such as PvP and boss fights.
+The NPC follows the player automatically, both inside and outside instances.
+The player can cancel the NPC at any time.
+
+Final Considerations
+The BuffFollow script offers a simple and efficient way to provide support buffs to players, with several features to customize its operation.
